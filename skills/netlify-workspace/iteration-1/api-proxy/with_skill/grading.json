@@ -1,0 +1,11 @@
+{
+  "eval_id": 2,
+  "eval_name": "api-proxy",
+  "run_type": "with_skill",
+  "expectations": [
+    {"text": "Includes redirect from /api/* to https://api.hafiz.app/:splat (or similar)", "passed": true, "evidence": "Line 10: to = \"https://api.hafiz.app/:splat\""},
+    {"text": "Uses status = 200 for transparent proxy", "passed": true, "evidence": "Line 11: status = 200"},
+    {"text": "Includes force = true", "passed": true, "evidence": "Line 12: force = true"},
+    {"text": "Addresses deploy preview compatibility", "passed": true, "evidence": "Explanation lines 47-51: explains redirects are global by default, no extra config needed for deploy previews"}
+  ]
+}

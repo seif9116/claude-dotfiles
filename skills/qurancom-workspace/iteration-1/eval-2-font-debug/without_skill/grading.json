@@ -1,0 +1,31 @@
+{
+  "eval_id": 2,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "Identifies this as a QCF font loading issue (each page has its own font file)",
+      "passed": true,
+      "evidence": "Lines 9-13: Correctly explains QCF V2 as 604 separate font files with PUA codepoints"
+    },
+    {
+      "text": "Explains that code_v2 glyphs only render with the matching page-specific QCF font",
+      "passed": true,
+      "evidence": "Line 13: 'A word's glyph only exists in the specific page font it belongs to'"
+    },
+    {
+      "text": "References the font URL pattern (static.qurancdn.com/fonts/quran/hafs/v2/woff2/p{N}.woff2)",
+      "passed": true,
+      "evidence": "Line 43: Shows the URL pattern in the code snippet"
+    },
+    {
+      "text": "Mentions the font loading mechanism (ensureQcfFont, document.fonts.load, or @font-face injection)",
+      "passed": true,
+      "evidence": "Lines 37-45: References ensureQcfFont function with code snippets"
+    },
+    {
+      "text": "Suggests concrete debugging steps or fixes",
+      "passed": true,
+      "evidence": "Identifies v2_page mismatch bug, 500ms timeout, loadedFonts caching issues. Provides multiple fixes."
+    }
+  ]
+}

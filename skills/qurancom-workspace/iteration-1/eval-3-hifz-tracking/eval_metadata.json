@@ -1,0 +1,27 @@
+{
+  "eval_id": 3,
+  "eval_name": "hifz-tracking",
+  "prompt": "For the hackathon submission I want to add a feature where users can mark surahs as 'memorized' and track their overall hifz progress. Ideally this syncs with their Quran.com account so it persists across devices. What APIs do I need and how should I architect this?",
+  "assertions": [
+    {
+      "text": "References the Quran Foundation User API (apis.quran.foundation or apis-prelive.quran.foundation)",
+      "type": "content_check"
+    },
+    {
+      "text": "Explains the OAuth2 authentication requirement (PKCE flow or client credentials)",
+      "type": "content_check"
+    },
+    {
+      "text": "Mentions relevant user API endpoints (activity-days, bookmarks, collections, or reading-sessions)",
+      "type": "content_check"
+    },
+    {
+      "text": "Suggests a local-first architecture with optional cloud sync (consistent with existing IndexedDB/FSRS pattern)",
+      "type": "content_check"
+    },
+    {
+      "text": "Provides a coherent architectural plan with specific data model suggestions",
+      "type": "quality_check"
+    }
+  ]
+}

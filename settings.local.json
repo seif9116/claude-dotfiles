@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s https://www.google.com/search?q=asus+GA403UU+slash+LED+off+linux+asus-wmi+sysfs+HID -H 'User-Agent: Mozilla/5.0')",
+      "Bash(curl -s https://www.google.com/search?q=site:reddit.com+ASUS+G14+2024+slash+LED+linux -H 'User-Agent: Mozilla/5.0')",
+      "WebSearch",
+      "WebFetch(domain:gitlab.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:wiki.archlinux.org)",
+      "WebFetch(domain:deepwiki.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(chmod:*)"
+    ]
+  }
+}

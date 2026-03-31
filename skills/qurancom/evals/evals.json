@@ -1,0 +1,23 @@
+{
+  "skill_name": "qurancom",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to add a juz selector to the mushaf navigation sheet so users can jump to any of the 30 juz. The current nav only has surah and page selectors. Can you help me add this? I need to know which API endpoint gives me juz data and how to map juz to page numbers.",
+      "expected_output": "Should reference GET /juzs endpoint, the verse_mapping field, explain how to convert juz to page numbers via the verse data, and ideally reference the existing mushaf-nav-sheet.tsx component",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Some pages in the mushaf view are showing weird box characters instead of Arabic text. It seems random — like page 50 works fine but page 234 shows boxes. The console shows no errors. What's going on and how do I fix it?",
+      "expected_output": "Should identify this as a QCF font loading issue, explain that each page needs its own font file (604 total), reference the font URL pattern, explain ensureQcfFont and document.fonts.load(), suggest checking race conditions and the 500ms timeout fallback",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "For the hackathon submission I want to add a feature where users can mark surahs as 'memorized' and track their overall hifz progress. Ideally this syncs with their Quran.com account so it persists across devices. What APIs do I need and how should I architect this?",
+      "expected_output": "Should explain the Quran Foundation User API (apis.quran.foundation), the OAuth2 PKCE flow, the activity-days and reading-sessions endpoints, the bookmark API as a potential storage mechanism, and suggest a local-first approach with optional sync (like the existing FSRS pattern)",
+      "files": []
+    }
+  ]
+}

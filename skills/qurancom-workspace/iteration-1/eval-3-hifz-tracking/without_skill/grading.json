@@ -1,0 +1,31 @@
+{
+  "eval_id": 3,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "References the Quran Foundation User API (apis.quran.foundation or apis-prelive.quran.foundation)",
+      "passed": true,
+      "evidence": "Mentions the QF User API client and existing integration in quran-user-api.ts"
+    },
+    {
+      "text": "Explains the OAuth2 authentication requirement (PKCE flow or client credentials)",
+      "passed": true,
+      "evidence": "Identifies existing OAuth2 PKCE auth in auth.ts and references it for the sync feature"
+    },
+    {
+      "text": "Mentions relevant user API endpoints (activity-days, bookmarks, collections, or reading-sessions)",
+      "passed": true,
+      "evidence": "Proposes using the Collections API (/auth/v1/collections) for storing memorized surah data"
+    },
+    {
+      "text": "Suggests a local-first architecture with optional cloud sync",
+      "passed": true,
+      "evidence": "Proposes local IndexedDB tracking with optional QF Collections API sync for cross-device persistence"
+    },
+    {
+      "text": "Provides a coherent architectural plan with specific data model suggestions",
+      "passed": true,
+      "evidence": "Provides SurahHifzRecord type, three-phase implementation plan, identifies 8 files to modify"
+    }
+  ]
+}

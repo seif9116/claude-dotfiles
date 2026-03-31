@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Proxy /api/* requests to the backend — transparent to the browser (status 200 = rewrite, not redirect).
+# force = true ensures the proxy applies even if a file happens to exist at /api/...
+# The :splat placeholder captures everything after /api/ and appends it to the backend URL.
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.hafiz.app/:splat"
+  status = 200
+  force = true
+
+# SPA fallback for client-side routing — serves index.html for all unmatched routes.
+# This MUST come after the /api/* rule because Netlify processes redirects top-to-bottom
+# and the first match wins. Without force, existing static files are still served directly.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

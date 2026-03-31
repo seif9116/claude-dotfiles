@@ -1,0 +1,10 @@
+{
+  "eval_id": 1,
+  "eval_name": "spa-404-fix",
+  "run_type": "without_skill",
+  "expectations": [
+    {"text": "Correctly diagnoses missing SPA fallback as root cause", "passed": true, "evidence": "Explanation clearly states: Netlify tries to find a file, no such file exists, returns default 404"},
+    {"text": "Includes [[redirects]] with from = /* and to = /index.html", "passed": true, "evidence": "Lines 7-10: from = \"/*\", to = \"/index.html\""},
+    {"text": "Uses status = 200 (rewrite) not 301/302 (redirect)", "passed": true, "evidence": "Line 10: status = 200, explanation covers why not 301/302"}
+  ]
+}

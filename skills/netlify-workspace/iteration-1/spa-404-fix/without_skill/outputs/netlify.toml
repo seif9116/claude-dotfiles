@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# SPA-style fallback: rewrite all paths to index.html so client-side
+# routing (React Router, Next.js, etc.) handles every route.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

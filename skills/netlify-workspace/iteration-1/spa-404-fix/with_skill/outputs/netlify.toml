@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback — serves index.html for all unmatched routes
+# so that client-side routing (React Router, etc.) can handle them.
+# status = 200 rewrites the response (keeps the URL in the browser unchanged).
+# Do NOT use force = true here; without it, Netlify still serves
+# existing static assets (JS, CSS, images) directly from disk.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

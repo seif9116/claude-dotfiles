@@ -1,0 +1,27 @@
+{
+  "eval_id": 2,
+  "eval_name": "font-debug",
+  "prompt": "Some pages in the mushaf view are showing weird box characters instead of Arabic text. It seems random — like page 50 works fine but page 234 shows boxes. The console shows no errors. What's going on and how do I fix it?",
+  "assertions": [
+    {
+      "text": "Identifies this as a QCF font loading issue (each page has its own font file)",
+      "type": "content_check"
+    },
+    {
+      "text": "Explains that code_v2 glyphs only render with the matching page-specific QCF font",
+      "type": "content_check"
+    },
+    {
+      "text": "References the font URL pattern (static.qurancdn.com/fonts/quran/hafs/v2/woff2/p{N}.woff2)",
+      "type": "content_check"
+    },
+    {
+      "text": "Mentions the font loading mechanism (ensureQcfFont, document.fonts.load, or @font-face injection)",
+      "type": "content_check"
+    },
+    {
+      "text": "Suggests concrete debugging steps or fixes (checking network tab, race conditions, timeout fallback)",
+      "type": "quality_check"
+    }
+  ]
+}

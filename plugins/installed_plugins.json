@@ -1,0 +1,225 @@
+{
+  "version": 2,
+  "plugins": {
+    "frontend-design@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/frontend-design/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-02T00:21:36.895Z",
+        "lastUpdated": "2026-03-25T20:46:26.645Z",
+        "gitCommitSha": "55b58ec6e5649104f926ba7558b567dc8d33c5ff"
+      }
+    ],
+    "github@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/github/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-02T00:22:40.188Z",
+        "lastUpdated": "2026-03-25T20:46:26.642Z",
+        "gitCommitSha": "55b58ec6e5649104f926ba7558b567dc8d33c5ff"
+      }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6",
+        "version": "5.0.6",
+        "installedAt": "2026-03-14T23:40:24.671Z",
+        "lastUpdated": "2026-03-25T20:15:08.551Z",
+        "gitCommitSha": "363923f74aa9cd7b470c0aaa73dee629a8bfdc90"
+      }
+    ],
+    "context7@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/context7/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-14T23:40:29.732Z",
+        "lastUpdated": "2026-03-25T20:46:26.641Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "playwright@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/playwright/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-15T02:59:21.762Z",
+        "lastUpdated": "2026-03-25T20:46:26.640Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "stripe@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/stripe/0.1.0",
+        "version": "0.1.0",
+        "installedAt": "2026-03-15T19:32:28.083Z",
+        "lastUpdated": "2026-03-15T19:32:28.083Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "feature-dev@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/feature-dev/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-15T20:03:19.568Z",
+        "lastUpdated": "2026-03-25T20:46:26.646Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "claude-code-setup@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/claude-code-setup/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-15T20:03:43.558Z",
+        "lastUpdated": "2026-03-15T20:03:43.558Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "skill-creator@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/skill-creator/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-16T14:03:18.127Z",
+        "lastUpdated": "2026-03-25T20:46:26.649Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "supabase@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/supabase/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-18T08:40:54.172Z",
+        "lastUpdated": "2026-03-25T20:46:26.644Z",
+        "gitCommitSha": "6b70f99f769f58b9b642dc8a271936b17862cf8c"
+      }
+    ],
+    "ralph-loop@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/ralph-loop/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-18T19:16:41.243Z",
+        "lastUpdated": "2026-03-25T20:46:26.647Z",
+        "gitCommitSha": "6b70f99f769f58b9b642dc8a271936b17862cf8c"
+      }
+    ],
+    "figma@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/claude-plugins-official/figma/2.0.2",
+        "version": "2.0.2",
+        "installedAt": "2026-03-21T23:55:44.948Z",
+        "lastUpdated": "2026-03-24T18:55:57.685Z",
+        "gitCommitSha": "f046182e32c8160b1254ad12ec8318f9a9aa50b5"
+      }
+    ],
+    "ui-design@designer-skills": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/designer-skills/ui-design/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-26T00:58:56.313Z",
+        "lastUpdated": "2026-03-26T00:58:56.313Z",
+        "gitCommitSha": "f6a40ad08518d366dae667e779930cdf6370d4cf"
+      }
+    ],
+    "design-systems@designer-skills": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/designer-skills/design-systems/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-26T00:58:57.742Z",
+        "lastUpdated": "2026-03-26T00:58:57.742Z",
+        "gitCommitSha": "f6a40ad08518d366dae667e779930cdf6370d4cf"
+      }
+    ],
+    "design-research@designer-skills": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/designer-skills/design-research/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-26T00:58:59.175Z",
+        "lastUpdated": "2026-03-26T00:58:59.175Z",
+        "gitCommitSha": "f6a40ad08518d366dae667e779930cdf6370d4cf"
+      }
+    ],
+    "ux-strategy@designer-skills": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/designer-skills/ux-strategy/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-26T00:59:00.581Z",
+        "lastUpdated": "2026-03-26T00:59:00.581Z",
+        "gitCommitSha": "f6a40ad08518d366dae667e779930cdf6370d4cf"
+      }
+    ],
+    "interaction-design@designer-skills": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/designer-skills/interaction-design/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-26T00:59:01.995Z",
+        "lastUpdated": "2026-03-26T00:59:01.995Z",
+        "gitCommitSha": "f6a40ad08518d366dae667e779930cdf6370d4cf"
+      }
+    ],
+    "prototyping-testing@designer-skills": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/designer-skills/prototyping-testing/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-26T00:59:03.423Z",
+        "lastUpdated": "2026-03-26T00:59:03.423Z",
+        "gitCommitSha": "f6a40ad08518d366dae667e779930cdf6370d4cf"
+      }
+    ],
+    "design-ops@designer-skills": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/designer-skills/design-ops/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-26T00:59:04.830Z",
+        "lastUpdated": "2026-03-26T00:59:04.830Z",
+        "gitCommitSha": "f6a40ad08518d366dae667e779930cdf6370d4cf"
+      }
+    ],
+    "designer-toolkit@designer-skills": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/designer-skills/designer-toolkit/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-26T00:59:06.296Z",
+        "lastUpdated": "2026-03-26T00:59:06.296Z",
+        "gitCommitSha": "f6a40ad08518d366dae667e779930cdf6370d4cf"
+      }
+    ],
+    "ui-ux-pro-max@ui-ux-pro-max-skill": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.5.0",
+        "version": "2.5.0",
+        "installedAt": "2026-03-26T00:59:37.123Z",
+        "lastUpdated": "2026-03-26T00:59:37.123Z",
+        "gitCommitSha": "506d9230e990c611a6a67c54c4e3a938ea20559d"
+      }
+    ],
+    "nano-banana@nano-banana-2-skill-marketplace": [
+      {
+        "scope": "user",
+        "installPath": "/home/seif/.claude/plugins/cache/nano-banana-2-skill-marketplace/nano-banana/2.0.0",
+        "version": "2.0.0",
+        "installedAt": "2026-03-26T01:00:59.206Z",
+        "lastUpdated": "2026-03-26T01:00:59.206Z",
+        "gitCommitSha": "80bab9a921608e701467ba7d03424c10589a233f"
+      }
+    ]
+  }
+}

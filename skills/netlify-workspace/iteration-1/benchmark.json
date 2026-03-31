@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "skill_name": "netlify",
+    "skill_path": "/home/seif/.claude/skills/netlify/SKILL.md",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-21T03:55:00Z",
+    "evals_run": ["security-headers", "spa-404-fix", "api-proxy"],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_name": "security-headers",
+      "with_skill": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 63.6,
+        "tokens": 18459
+      },
+      "without_skill": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 47.7,
+        "tokens": 11982
+      }
+    },
+    {
+      "eval_name": "spa-404-fix",
+      "with_skill": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3,
+        "time_seconds": 47.3,
+        "tokens": 16446
+      },
+      "without_skill": {
+        "pass_rate": 1.0,
+        "passed": 3,
+        "total": 3,
+        "time_seconds": 39.1,
+        "tokens": 11800
+      }
+    },
+    {
+      "eval_name": "api-proxy",
+      "with_skill": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 60.4,
+        "tokens": 17166
+      },
+      "without_skill": {
+        "pass_rate": 1.0,
+        "passed": 4,
+        "total": 4,
+        "time_seconds": 57.7,
+        "tokens": 12600
+      }
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "mean_pass_rate": 1.0,
+      "mean_time_seconds": 57.1,
+      "mean_tokens": 17357
+    },
+    "without_skill": {
+      "mean_pass_rate": 1.0,
+      "mean_time_seconds": 48.2,
+      "mean_tokens": 12127
+    },
+    "delta": {
+      "pass_rate": "+0.00",
+      "time_seconds": "+8.9",
+      "tokens": "+5230"
+    }
+  },
+  "notes": [
+    "All assertions pass for both configurations — the skill doesn't change correctness for these basic scenarios",
+    "With-skill runs use ~43% more tokens due to reading the SKILL.md file",
+    "With-skill runs are ~18% slower for the same reason",
+    "Qualitative differences: with-skill explanations are more structured and reference specific Netlify behaviors (e.g., force=true semantics, deploy context inheritance)",
+    "The API proxy with-skill run correctly noted that top-level redirects apply to all deploy contexts; the without-skill run duplicated rules in context blocks (verbose but safe)",
+    "The SPA fix with-skill run included the force=true warning; without-skill also covered this",
+    "Both configurations produced working, correct netlify.toml files for all 3 scenarios"
+  ]
+}

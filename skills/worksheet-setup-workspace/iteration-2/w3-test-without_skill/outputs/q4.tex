@@ -1,0 +1,14 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\qs{Question 4}{
+(5 pts) Suppose there is an MDP that under any policy produces the deterministic sequence of rewards $+1, -1, +1, -1, +1, -1, \ldots$ going on forever. Technically, this is not allowed because it violates ergodicity; there is no stationary limiting distribution $\mu_\pi$ and the limit (10.7) does not exist. Nevertheless, the average reward (10.6) is well defined; What is it? Now consider two states in this MDP, call them \texttt{a} and \texttt{b}. From \texttt{a}, the reward sequence is exactly as described above, starting with a $+1$, whereas, from \texttt{b}, the reward sequence starts with a $-1$ and then continues with $+1, -1, +1, -1, \ldots$. The differential return (10.9) is not well defined for this case as the limit does not exist. To repair this, one could alternately define the value of a state as
+\[
+v_\pi(s) \doteq \lim_{\gamma \to 1} \lim_{h \to \infty} \sum_{t=0}^{h} \gamma^t \Big( \mathbb{E}_\pi[R_{t+1} | S_0 = s] - r(\pi) \Big). \tag{1}
+\]
+Under this definition, what are the values of states \texttt{a} and \texttt{b}?
+}
+
+\sol
+
+\end{document}

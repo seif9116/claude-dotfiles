@@ -1,0 +1,38 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\qs{Question 10}{
+(27 pts) There are five mean-square-error measures of the quality of a value function listed in the textbook's summary of notation (``value function'' is used here, as in the book, to mean any function from the state space to the real numbers). This exercise is meant to test your knowledge of the five error measures, in particular, your knowledge of their individual strengths and weaknesses. One of the five measures, $\overline{\text{VE}}$, is defined in Chapter 9 and the others are defined in Chapter 11. All are functions from the space of weight vectors $\mathbf{w} \in \mathbb{R}^d$ to non-negative real numbers $\overline{\text{VE}}(\mathbf{w}) \ge 0$, and presume a mapping from those weight vectors to a value function: $\mathbf{w} \mapsto v_\mathbf{w}$. All presume a target policy $\pi$ and concern the relationship between $v_\mathbf{w}$ and $v_\pi$.
+
+For any of the five measures, let its minimizer be the value (or values) $\mathbf{w}^*$ at which it obtains its minimum value, and let its minimum be that value. If the minimum is zero, then the minimizer $\mathbf{w}^*$ is said to be a zero of the measure. We say a measure is learnable if its value for any $\mathbf{w}$ can be estimated with high accuracy from an infinite stream of experience (feature vectors and rewards) following $\pi$ (in a continuing problem). We say a measure is optimizable if its minimizer (or one of its minimizers) can be found from such experience.
+
+Recall that the bar in $\overline{\text{VE}}$ is a shorthand for ``mean square'' and that $\overline{\text{VE}}$ can also be written as MSVE, which may be more convenient for you to write in some of your answers to these questions.
+
+Most of the questions have simple answers, and it is okay to give them simply if you are sure of your answer. But if you are unsure, then you might give an explanation of your answer to maximize the probability of getting partial credit if you are not exactly right.
+
+\begin{enumerate}
+    \item[(a)] (1 pt) In the case of genuine approximation, also called the under-parameterized case, or the case in which we are taking the Big World perspective, would we expect $\overline{\text{VE}}$ to have a zero?
+    \item[(b)] (1 pt) If there is a weight vector $\mathbf{w}$ at which $v_\mathbf{w}(s) = v_\pi(s), \forall s \in \mathcal{S}$, then what is $\overline{\text{VE}}(\mathbf{w})$?
+    \item[(c)] (2 pts) Is the $\overline{\text{VE}}$ learnable, given a powerful non-linear function approximator such as a multi-layer neural network with a large number of layers and weights?
+    \item[(d)] (2 pt) Is the $\overline{\text{VE}}$ optimizable, given a linear function approximator?
+    \item[(e)] (1 pt) Now consider the $\overline{\text{RE}}$. Is its minimum the same as, smaller than, or larger than the minimum of the $\overline{\text{VE}}$?
+    \item[(f)] (1 pt) Is $\overline{\text{RE}}$'s minimizer the same as $\overline{\text{VE}}$'s minimizer?
+    \item[(g)] (1 pt) Is the $\overline{\text{RE}}$ learnable?
+    \item[(h)] (1 pt) Now consider the $\overline{\text{BE}}$. Suppose $\mathbf{w}$ is a zero of the $\overline{\text{VE}}$. What then is $\overline{\text{BE}}(\mathbf{w})$?
+    \item[(i)] (1 pt) Now suppose $\mathbf{w}$ is a zero of the $\overline{\text{BE}}$. Is it also a zero of the $\overline{\text{VE}}$?
+    \item[(j)] (1 pt) Is the $\overline{\text{BE}}$ learnable?
+    \item[(k)] (1 pt) Now consider the $\overline{\text{PBE}}$. Is the $\overline{\text{PBE}}$ learnable?
+    \item[(l)] (1 pt) Suppose the $\overline{\text{VE}}$ has a zero. Does the $\overline{\text{PBE}}$ also have a zero (assume linear function approximation)?
+    \item[(m)] (1 pt) Suppose the $\overline{\text{PBE}}$ has a zero. Must the $\overline{\text{BE}}$ also have a zero (assume linear function approximation)?
+    \item[(n)] (2 pts) With linear function approximation, in the case of genuine approximation, is there likely to be a zero of the $\overline{\text{PBE}}$?
+    \item[(o)] (1 pt) Now consider the $\overline{\text{TDE}}$. Is the $\overline{\text{TDE}}$ learnable?
+    \item[(p)] (2 pts) Suppose the minimum of the $\overline{\text{TDE}}$ is zero. What are the minimums of the other four measures?
+    \item[(q)] (1 pt) Is the minimum of the $\overline{\text{TDE}}$ likely to be zero?
+    \item[(r)] (2 pts) In general, is the minimizer of the $\overline{\text{TDE}}$ the same as the minimizer of any of the other four measures?
+    \item[(s)] (4 pts) Consider semi-gradient TD(0) with a linear function approximator. Which measure or measures does it minimize in the limit of infinite data if the step-size parameter is reduced appropriately? For which measure or measures does it find a zero?
+\end{enumerate}
+}
+
+\sol
+
+\end{document}

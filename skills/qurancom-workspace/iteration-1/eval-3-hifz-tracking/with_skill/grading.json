@@ -1,0 +1,31 @@
+{
+  "eval_id": 3,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "References the Quran Foundation User API (apis.quran.foundation or apis-prelive.quran.foundation)",
+      "passed": true,
+      "evidence": "Line 25: 'authenticated User API at https://apis.quran.foundation'"
+    },
+    {
+      "text": "Explains the OAuth2 authentication requirement (PKCE flow or client credentials)",
+      "passed": true,
+      "evidence": "Line 7: 'OAuth2 PKCE auth (web/src/lib/auth.ts) — full login/callback/token-refresh flow against oauth2.quran.foundation'"
+    },
+    {
+      "text": "Mentions relevant user API endpoints (activity-days, bookmarks, collections, or reading-sessions)",
+      "passed": true,
+      "evidence": "Lines 27-34: Goals API endpoints table. Lines 52-54: Activity Days API. Lines 56-58: Bookmarks API."
+    },
+    {
+      "text": "Suggests a local-first architecture with optional cloud sync",
+      "passed": true,
+      "evidence": "Lines 9-10: IndexedDB store with per-verse AyahCard already tracking status. Proposes aggregating verse-level into surah-level with sync."
+    },
+    {
+      "text": "Provides a coherent architectural plan with specific data model suggestions",
+      "passed": true,
+      "evidence": "Lines 37-50: Concrete goal payload JSON with type, target, progress, metadata. Phased implementation plan."
+    }
+  ]
+}

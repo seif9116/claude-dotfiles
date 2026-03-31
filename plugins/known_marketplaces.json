@@ -1,0 +1,34 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/home/seif/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-03-25T21:00:54.487Z"
+  },
+  "designer-skills": {
+    "source": {
+      "source": "github",
+      "repo": "Owl-Listener/designer-skills"
+    },
+    "installLocation": "/home/seif/.claude/plugins/marketplaces/designer-skills",
+    "lastUpdated": "2026-03-26T00:58:09.524Z"
+  },
+  "ui-ux-pro-max-skill": {
+    "source": {
+      "source": "github",
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+    },
+    "installLocation": "/home/seif/.claude/plugins/marketplaces/ui-ux-pro-max-skill",
+    "lastUpdated": "2026-03-26T00:59:23.210Z"
+  },
+  "nano-banana-2-skill-marketplace": {
+    "source": {
+      "source": "github",
+      "repo": "kingbootoshi/nano-banana-2-skill"
+    },
+    "installLocation": "/home/seif/.claude/plugins/marketplaces/nano-banana-2-skill-marketplace",
+    "lastUpdated": "2026-03-26T01:00:49.343Z"
+  }
+}

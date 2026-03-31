@@ -1,0 +1,31 @@
+{
+  "eval_id": 2,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "Identifies this as a QCF font loading issue (each page has its own font file)",
+      "passed": true,
+      "evidence": "Lines 5-6: 'mismatch between the font family name and the CDN URL in the ensureQcfFont function'"
+    },
+    {
+      "text": "Explains that code_v2 glyphs only render with the matching page-specific QCF font",
+      "passed": true,
+      "evidence": "Implicitly understood throughout — explains PUA codepoints and font-specific glyphs"
+    },
+    {
+      "text": "References the font URL pattern (static.qurancdn.com/fonts/quran/hafs/v2/woff2/p{N}.woff2)",
+      "passed": true,
+      "evidence": "Line 15: Shows exact URL pattern and identifies the padding mismatch"
+    },
+    {
+      "text": "Mentions the font loading mechanism (ensureQcfFont, document.fonts.load, or @font-face injection)",
+      "passed": true,
+      "evidence": "Lines 10-17: References ensureQcfFont, @font-face injection, loadedFonts Set, font-display:block"
+    },
+    {
+      "text": "Suggests concrete debugging steps or fixes",
+      "passed": true,
+      "evidence": "Lines 43-76: Provides exact code fix with padStart(3,'0'), plus verification steps (network tab 404 check)"
+    }
+  ]
+}

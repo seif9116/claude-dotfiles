@@ -1,0 +1,11 @@
+{
+  "eval_id": 0,
+  "eval_name": "security-headers",
+  "run_type": "without_skill",
+  "expectations": [
+    {"text": "Includes X-Frame-Options header", "passed": true, "evidence": "Line 9: X-Frame-Options = \"DENY\""},
+    {"text": "Includes X-Content-Type-Options nosniff header", "passed": true, "evidence": "Line 10: X-Content-Type-Options = \"nosniff\""},
+    {"text": "Includes cache-control with long max-age for static assets (not on /*)", "passed": true, "evidence": "Line 22: Cache-Control = \"public, max-age=31536000, immutable\" for /_next/static/*"},
+    {"text": "Preserves existing [build] and [[redirects]] sections", "passed": true, "evidence": "Lines 1-2: [build] preserved, Lines 75-78: SPA fallback redirect preserved"}
+  ]
+}

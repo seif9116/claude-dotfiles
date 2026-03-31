@@ -1,0 +1,11 @@
+{
+  "eval_id": 0,
+  "eval_name": "security-headers",
+  "prompt": "I just deployed my Next.js static export site to Netlify but the netlify.toml only has the build command and publish directory. Can you add security headers and aggressive caching for static assets?",
+  "assertions": [
+    {"text": "Includes X-Frame-Options header", "type": "content_check"},
+    {"text": "Includes X-Content-Type-Options nosniff header", "type": "content_check"},
+    {"text": "Includes cache-control with long max-age for static assets (not on /*)", "type": "content_check"},
+    {"text": "Preserves existing [build] and [[redirects]] sections", "type": "content_check"}
+  ]
+}

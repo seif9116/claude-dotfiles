@@ -1,0 +1,11 @@
+{
+  "eval_id": 2,
+  "eval_name": "api-proxy",
+  "run_type": "without_skill",
+  "expectations": [
+    {"text": "Includes redirect from /api/* to https://api.hafiz.app/:splat (or similar)", "passed": true, "evidence": "Line 12: to = \"https://api.hafiz.app/api/:splat\" — maps to /api/ prefix on backend"},
+    {"text": "Uses status = 200 for transparent proxy", "passed": true, "evidence": "Line 13: status = 200"},
+    {"text": "Includes force = true", "passed": true, "evidence": "Line 13: force = true"},
+    {"text": "Addresses deploy preview compatibility", "passed": true, "evidence": "Lines 29-58: explicitly duplicates redirects in deploy-preview and branch-deploy contexts"}
+  ]
+}

@@ -1,0 +1,14 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\qs{Question 14}{
+(6 pts) The figure below shows an example of the kind of task that is difficult for control methods using accumulating eligibility traces. All rewards are zero except on entering the terminal state, which produces a reward of $+1$. From each state, selecting the \texttt{right} action brings the agent one step closer to the terminal reward, whereas the \texttt{wrong} (upper) action leaves it in the same state to try again. Assume a tabular representation so that there is one trace for each state--action pair. The full sequence of states is long enough that one would like to use long traces to get the fastest learning. However, problems occur if long accumulating traces are used. Suppose, on the first episode, at some state, $s$, the agent by chance takes the \texttt{wrong} action a few times before taking the \texttt{right} action. As the agent continues, the trace (component of the trace vector) for $s$, \texttt{wrong} is likely to be larger than the trace for $s$, \texttt{right}. The \texttt{right} action was more recent, but the \texttt{wrong} action was selected more times. When reward is finally received, then, the value for the wrong action is likely to go up more than the value for the right action. On the next episode the agent will be even more likely to go the \texttt{wrong} way many times before going \texttt{right}, making it even more likely that the \texttt{wrong} action will have the larger trace. Eventually, all of this will be corrected, but learning is significantly slowed. With replacing traces, on the other hand, this problem never occurs. No matter how many times the \texttt{wrong} action is taken, its eligibility trace is always less than that for the \texttt{right} action after the \texttt{right} action has been taken.
+
+% TODO: Add figure from assignment PDF
+
+Specifically, suppose from state $s$ the \texttt{wrong} action is taken twice before the \texttt{right} action is taken. If accumulating traces are used, then how big must the trace parameter $\lambda$ be in order for the \texttt{wrong} action to end up with a larger eligibility trace than the \texttt{right} action?
+}
+
+\sol
+
+\end{document}

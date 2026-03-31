@@ -1,0 +1,42 @@
+# Secrets
+.credentials.json
+.env
+
+# Ephemeral / large
+history.jsonl
+stats-cache.json
+vercel-plugin-*
+
+# Cache and session data
+cache/
+debug/
+file-history/
+ide/
+image-cache/
+paste-cache/
+plans/
+session-env/
+sessions/
+shell-snapshots/
+statsig/
+tasks/
+telemetry/
+todos/
+backups/
+
+# Project-specific memories (per-repo, not portable)
+projects/
+
+# Plugin downloads (reinstallable from manifests)
+plugins/cache/
+plugins/marketplaces/
+plugins/install-counts-cache.json
+
+# MCP auth cache
+mcp-needs-auth-cache.json
+
+# Plugin config (empty/ephemeral)
+plugins/config.json
+
+# Git repos inside skills (cloned skills)
+skills/**/.git/

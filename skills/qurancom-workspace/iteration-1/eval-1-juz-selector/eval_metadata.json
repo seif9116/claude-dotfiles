@@ -1,0 +1,27 @@
+{
+  "eval_id": 1,
+  "eval_name": "juz-selector",
+  "prompt": "I want to add a juz selector to the mushaf navigation sheet so users can jump to any of the 30 juz. The current nav only has surah and page selectors. Can you help me add this? I need to know which API endpoint gives me juz data and how to map juz to page numbers.",
+  "assertions": [
+    {
+      "text": "References the GET /juzs API endpoint",
+      "type": "content_check"
+    },
+    {
+      "text": "Explains the verse_mapping field in the juz response (which maps chapter numbers to verse ranges)",
+      "type": "content_check"
+    },
+    {
+      "text": "Describes how to convert juz data to page numbers (either via verse-to-page lookup or hardcoded page mapping)",
+      "type": "content_check"
+    },
+    {
+      "text": "References or acknowledges the existing mushaf-nav-sheet.tsx component",
+      "type": "content_check"
+    },
+    {
+      "text": "Provides actionable implementation guidance (not just theory)",
+      "type": "quality_check"
+    }
+  ]
+}

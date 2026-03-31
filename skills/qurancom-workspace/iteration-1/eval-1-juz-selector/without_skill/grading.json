@@ -1,0 +1,31 @@
+{
+  "eval_id": 1,
+  "run_type": "without_skill",
+  "expectations": [
+    {
+      "text": "References the GET /juzs API endpoint",
+      "passed": true,
+      "evidence": "Mentions GET /juzs and GET /verses/by_juz/{juz_number} endpoints"
+    },
+    {
+      "text": "Explains the verse_mapping field in the juz response",
+      "passed": true,
+      "evidence": "Mentions verse mappings per juz from the API response"
+    },
+    {
+      "text": "Describes how to convert juz data to page numbers",
+      "passed": true,
+      "evidence": "Identifies the hardcoded JUZ_START_PAGES array and getJuzStartPage() function"
+    },
+    {
+      "text": "References or acknowledges the existing mushaf-nav-sheet.tsx component",
+      "passed": true,
+      "evidence": "References mushaf-nav-sheet.tsx with exact line numbers (126-138)"
+    },
+    {
+      "text": "Provides actionable implementation guidance",
+      "passed": true,
+      "evidence": "Correctly identifies the feature already exists and points to relevant files"
+    }
+  ]
+}

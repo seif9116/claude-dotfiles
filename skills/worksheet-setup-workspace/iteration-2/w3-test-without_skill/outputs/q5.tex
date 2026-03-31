@@ -1,0 +1,18 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\qs{Question 5}{
+(3 pts) A useful fact about differential values is that they average to zero:
+\[
+\sum_s \mu_\pi(s) v_\pi(s) = 0. \tag{2}
+\]
+In fact, the differential values average to zero (2) even when the Markov chain is non-ergodic (in which case $\mu_\pi$ as defined in the book does exist) under the more general definition:
+\[
+\mu_\pi(s) \doteq \lim_{h \to \infty} \frac{1}{h} \sum_{t=1}^{h} \Pr\{S_t = s \mid A_{0:t-1} \sim \pi\}. \tag{3}
+\]
+Redo Question 4, now using (3) and (2) and the Bellman equations (and not (1)). You should get the same answers as before, but much more easily.
+}
+
+\sol
+
+\end{document}

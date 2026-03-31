@@ -1,0 +1,23 @@
+{
+  "skill_name": "netlify",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I just deployed my Next.js static export site to Netlify but the netlify.toml only has the build command and publish directory. Can you add security headers and aggressive caching for static assets?",
+      "expected_output": "Updated netlify.toml with [[headers]] blocks for security headers (X-Frame-Options, X-Content-Type-Options, etc.) on /* and cache-control headers on static asset paths",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "My React SPA is deployed on Netlify and works fine on the homepage, but when I navigate to /dashboard and hit refresh, I get a 'Page Not Found' error. How do I fix this?",
+      "expected_output": "Diagnose as missing SPA fallback redirect, provide a [[redirects]] rule with from=/* to=/index.html status=200",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need to set up my netlify.toml so that any request to /api/* gets proxied to my backend server at https://api.hafiz.app without the browser seeing a redirect. Also make sure it works for deploy previews too.",
+      "expected_output": "Add a proxy redirect with status=200 and force=true, explain that deploy contexts inherit the redirect, and note the :splat pattern for path forwarding",
+      "files": []
+    }
+  ]
+}

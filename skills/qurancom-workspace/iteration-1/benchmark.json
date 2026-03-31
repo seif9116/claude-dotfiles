@@ -1,0 +1,82 @@
+{
+  "skill_name": "qurancom",
+  "iteration": 1,
+  "configurations": [
+    {
+      "name": "with_skill",
+      "results": [
+        {
+          "eval_name": "juz-selector",
+          "pass_rate": 1.0,
+          "passed": 5,
+          "total": 5,
+          "tokens": 50897,
+          "duration_seconds": 94.0
+        },
+        {
+          "eval_name": "font-debug",
+          "pass_rate": 1.0,
+          "passed": 5,
+          "total": 5,
+          "tokens": 40306,
+          "duration_seconds": 105.2
+        },
+        {
+          "eval_name": "hifz-tracking",
+          "pass_rate": 1.0,
+          "passed": 5,
+          "total": 5,
+          "tokens": 72550,
+          "duration_seconds": 150.8
+        }
+      ],
+      "aggregate": {
+        "mean_pass_rate": 1.0,
+        "stddev_pass_rate": 0.0,
+        "mean_tokens": 54584,
+        "mean_duration_seconds": 116.7
+      }
+    },
+    {
+      "name": "without_skill",
+      "results": [
+        {
+          "eval_name": "juz-selector",
+          "pass_rate": 1.0,
+          "passed": 5,
+          "total": 5,
+          "tokens": 41782,
+          "duration_seconds": 93.3
+        },
+        {
+          "eval_name": "font-debug",
+          "pass_rate": 1.0,
+          "passed": 5,
+          "total": 5,
+          "tokens": 38099,
+          "duration_seconds": 159.0
+        },
+        {
+          "eval_name": "hifz-tracking",
+          "pass_rate": 1.0,
+          "passed": 5,
+          "total": 5,
+          "tokens": 56397,
+          "duration_seconds": 129.9
+        }
+      ],
+      "aggregate": {
+        "mean_pass_rate": 1.0,
+        "stddev_pass_rate": 0.0,
+        "mean_tokens": 45426,
+        "mean_duration_seconds": 127.4
+      }
+    }
+  ],
+  "delta": {
+    "pass_rate": 0.0,
+    "tokens": "+20.2%",
+    "duration": "-8.4%"
+  },
+  "analysis": "Both with-skill and without-skill pass all assertions at 100%. This is expected for a knowledge/reference skill where the codebase itself contains most answers. The skill's value is qualitative rather than quantitative: with-skill responses reference specific API endpoints, URL patterns, and auth flows from official docs (not just codebase inference), provide richer context (e.g., exact CDN URL format with padding requirement), and show awareness of the broader Quran.com ecosystem. The with-skill runs use ~20% more tokens (reading the skill adds context) but are slightly faster on average. The key differentiator is depth of API knowledge and confidence in external integration patterns."
+}

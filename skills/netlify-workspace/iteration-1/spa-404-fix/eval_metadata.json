@@ -1,0 +1,10 @@
+{
+  "eval_id": 1,
+  "eval_name": "spa-404-fix",
+  "prompt": "My React SPA is deployed on Netlify and works fine on the homepage, but when I navigate to /dashboard and hit refresh, I get a 'Page Not Found' error. How do I fix this?",
+  "assertions": [
+    {"text": "Correctly diagnoses missing SPA fallback as root cause", "type": "content_check"},
+    {"text": "Includes [[redirects]] with from = /* and to = /index.html", "type": "content_check"},
+    {"text": "Uses status = 200 (rewrite) not 301/302 (redirect)", "type": "content_check"}
+  ]
+}

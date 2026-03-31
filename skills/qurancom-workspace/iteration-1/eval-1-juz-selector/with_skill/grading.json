@@ -1,0 +1,31 @@
+{
+  "eval_id": 1,
+  "run_type": "with_skill",
+  "expectations": [
+    {
+      "text": "References the GET /juzs API endpoint",
+      "passed": true,
+      "evidence": "Line 41: 'GET /juzs at https://api.quran.com/api/v4/juzs' with full response shape"
+    },
+    {
+      "text": "Explains the verse_mapping field in the juz response",
+      "passed": true,
+      "evidence": "Lines 59-60: Explains verse_mapping with example {'1': '1-7', '2': '1-141'} and what keys/values mean"
+    },
+    {
+      "text": "Describes how to convert juz data to page numbers",
+      "passed": true,
+      "evidence": "Lines 71-77: Describes both the hardcoded JUZ_START_PAGES approach AND dynamic derivation via verse_mapping + page lookup"
+    },
+    {
+      "text": "References or acknowledges the existing mushaf-nav-sheet.tsx component",
+      "passed": true,
+      "evidence": "Lines 9-11: References mushaf-nav-sheet.tsx with exact line numbers and describes the existing juz tab"
+    },
+    {
+      "text": "Provides actionable implementation guidance",
+      "passed": true,
+      "evidence": "Lines 85-115: Provides concrete enhancement suggestions with code samples (highlighted current juz, juz names)"
+    }
+  ]
+}

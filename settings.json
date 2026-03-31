@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "mcp__plugin_playwright_playwright__browser_install",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001)"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/scripts/statusline.sh"
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "stripe@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "supabase@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": false,
+    "figma@claude-plugins-official": true,
+    "ui-design@designer-skills": true,
+    "design-systems@designer-skills": true,
+    "design-research@designer-skills": true,
+    "ux-strategy@designer-skills": true,
+    "interaction-design@designer-skills": true,
+    "prototyping-testing@designer-skills": true,
+    "design-ops@designer-skills": true,
+    "designer-toolkit@designer-skills": true,
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true,
+    "nano-banana@nano-banana-2-skill-marketplace": true
+  },
+  "extraKnownMarketplaces": {
+    "designer-skills": {
+      "source": {
+        "source": "github",
+        "repo": "Owl-Listener/designer-skills"
+      }
+    },
+    "ui-ux-pro-max-skill": {
+      "source": {
+        "source": "github",
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+      }
+    },
+    "nano-banana-2-skill-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "kingbootoshi/nano-banana-2-skill"
+      }
+    }
+  },
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1754162579629
+  },
+  "pluginDirs": [
+    "/home/seif/university/projects/semantic_images"
+  ]
+}

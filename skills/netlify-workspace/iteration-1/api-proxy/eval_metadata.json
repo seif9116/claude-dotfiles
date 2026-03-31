@@ -1,0 +1,11 @@
+{
+  "eval_id": 2,
+  "eval_name": "api-proxy",
+  "prompt": "I need to set up my netlify.toml so that any request to /api/* gets proxied to my backend server at https://api.hafiz.app without the browser seeing a redirect. Also make sure it works for deploy previews too.",
+  "assertions": [
+    {"text": "Includes redirect from /api/* to https://api.hafiz.app/:splat (or similar)", "type": "content_check"},
+    {"text": "Uses status = 200 for transparent proxy", "type": "content_check"},
+    {"text": "Includes force = true", "type": "content_check"},
+    {"text": "Addresses deploy preview compatibility", "type": "content_check"}
+  ]
+}

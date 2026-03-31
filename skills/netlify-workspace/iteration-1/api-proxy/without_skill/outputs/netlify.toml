@@ -1,0 +1,58 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Proxy all /api/* requests to the backend.
+# Status 200 makes this a rewrite (invisible proxy), not a redirect.
+# The exclamation mark (!) on the SPA fallback ensures the /api/* rule wins
+# even though the catch-all appears later.
+[[redirects]]
+  from = "/api/*"
+  to = "https://api.hafiz.app/api/:splat"
+  status = 200
+  force = true
+  [redirects.headers]
+    X-Forwarded-Host = "hafiz.app"
+
+# SPA-style fallback for client-side routing.
+# The trailing "!" is not needed here because Netlify processes rules top-down
+# and this catch-all is last, but `force = true` ensures it serves index.html
+# even when a file doesn't literally exist at that path.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Deploy-preview and branch-deploy context overrides.
+# These ensure the proxy still points at the production backend API
+# (change the `to` value if you have a staging backend).
+[context.deploy-preview]
+  # Inherits [build] settings automatically.
+
+  [[context.deploy-preview.redirects]]
+    from = "/api/*"
+    to = "https://api.hafiz.app/api/:splat"
+    status = 200
+    force = true
+    [context.deploy-preview.redirects.headers]
+      X-Forwarded-Host = "hafiz.app"
+
+  [[context.deploy-preview.redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
+
+[context.branch-deploy]
+
+  [[context.branch-deploy.redirects]]
+    from = "/api/*"
+    to = "https://api.hafiz.app/api/:splat"
+    status = 200
+    force = true
+    [context.branch-deploy.redirects.headers]
+      X-Forwarded-Host = "hafiz.app"
+
+  [[context.branch-deploy.redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200

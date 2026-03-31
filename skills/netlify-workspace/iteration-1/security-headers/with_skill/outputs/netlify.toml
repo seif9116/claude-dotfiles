@@ -1,0 +1,69 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# ──────────────────────────────────────────────
+# Security headers — applied to every response
+# ──────────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), geolocation=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; connect-src 'self' https:; media-src 'self' blob:;"
+
+# ──────────────────────────────────────────────
+# Cache: Next.js hashed build assets (immutable)
+# Covers JS chunks, CSS, fonts, and media under _next/
+# These filenames contain content hashes so they are
+# safe to cache forever — a new build produces new names.
+# ──────────────────────────────────────────────
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ──────────────────────────────────────────────
+# Cache: static images and SVGs in the public root
+# These don't have content hashes, so use a shorter
+# max-age with revalidation.
+# ──────────────────────────────────────────────
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+# ──────────────────────────────────────────────
+# Cache: HTML pages — short-lived so deploys propagate fast
+# ──────────────────────────────────────────────
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ──────────────────────────────────────────────
+# SPA-style fallback for client-side routing
+# ──────────────────────────────────────────────
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
