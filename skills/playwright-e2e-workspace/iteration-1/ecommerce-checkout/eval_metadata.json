@@ -1,0 +1,18 @@
+{
+  "eval_id": 1,
+  "eval_name": "ecommerce-checkout",
+  "prompt": "I have a Next.js e-commerce app at /home/seif/test-ecommerce. The checkout flow user story is: 'As a customer, I can add items to my cart, enter shipping info, choose a payment method, and complete my purchase.' I need comprehensive Playwright E2E tests for this. The app runs on port 3000.",
+  "assertions": [
+    "Tests are organized in describe blocks by behavior (happy path, validation, error handling, etc.)",
+    "Happy path test covers the full flow: add to cart -> shipping -> payment -> order confirmation",
+    "Validation tests cover empty required fields and invalid inputs",
+    "Boundary value tests exist for at least one numeric/string field",
+    "External payment API is mocked using page.route()",
+    "All locators use semantic methods (getByRole, getByLabel, getByText, getByTestId) — no CSS selectors or XPath",
+    "All assertions use web-first auto-retrying methods (toBeVisible, toHaveText, etc.) — no manual isVisible() checks",
+    "No hard-coded waits (waitForTimeout)",
+    "Tests are independent — no shared state between tests",
+    "At least one accessibility test is included (axe-core or keyboard navigation)",
+    "A test plan or coverage summary is presented before writing code"
+  ]
+}

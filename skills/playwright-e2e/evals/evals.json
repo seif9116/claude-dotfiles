@@ -1,0 +1,62 @@
+{
+  "skill_name": "playwright-e2e",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a Next.js e-commerce app at /home/seif/test-ecommerce. The checkout flow user story is: 'As a customer, I can add items to my cart, enter shipping info, choose a payment method, and complete my purchase.' I need comprehensive Playwright E2E tests for this. The app runs on port 3000.",
+      "expected_output": "A comprehensive test suite organized by user story covering happy path, validation, error handling, edge cases, and accessibility. Should use semantic locators, web-first assertions, and mock external payment APIs.",
+      "files": [],
+      "expectations": [
+        "Tests are organized in describe blocks by behavior (happy path, validation, error handling, etc.)",
+        "Happy path test covers the full flow: add to cart -> shipping -> payment -> order confirmation",
+        "Validation tests cover empty required fields and invalid inputs",
+        "Boundary value tests exist for at least one numeric/string field",
+        "External payment API is mocked using page.route()",
+        "All locators use semantic methods (getByRole, getByLabel, getByText, getByTestId) — no CSS selectors or XPath",
+        "All assertions use web-first auto-retrying methods (toBeVisible, toHaveText, etc.) — no manual isVisible() checks",
+        "No hard-coded waits (waitForTimeout)",
+        "Tests are independent — no shared state between tests",
+        "At least one accessibility test is included (axe-core or keyboard navigation)",
+        "A test plan or coverage summary is presented before writing code"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Write playwright tests for our contact form. The form has name, email, message fields and a submit button. After submission it shows a success toast. The project is at /home/seif/test-contact-form and already has playwright installed.",
+      "expected_output": "Even for this 'simple' form, tests should cover validation boundaries, error states, and accessibility — not just the happy path. Should use data-driven tests for input variations.",
+      "files": [],
+      "expectations": [
+        "Happy path test submits the form and verifies the success toast appears",
+        "Validation tests cover empty fields, invalid email format, and field length boundaries",
+        "At least one boundary value test (e.g., name at min/max length, message at min/max length)",
+        "Uses parameterized/data-driven tests for input variations instead of copy-pasting",
+        "All locators use semantic methods — no CSS selectors or XPath",
+        "All assertions use web-first auto-retrying methods",
+        "No hard-coded waits",
+        "Tests are independent",
+        "At least one accessibility check is included",
+        "Test names describe the user behavior being verified (not implementation details)",
+        "A test plan is presented before writing code"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We already have playwright set up with POM in our project at /home/seif/test-auth-app. There's a pages/ directory with page objects and tests in tests/e2e/. I need E2E tests for the user story: 'As a user, I can sign up, verify my email, and log in.' Make sure to follow our existing patterns.",
+      "expected_output": "Tests should follow the project's existing POM pattern, extend the base page class, and use the established fixture system. Coverage should include the full signup->verify->login flow plus edge cases.",
+      "files": [],
+      "expectations": [
+        "New page objects extend the existing base.page.ts pattern",
+        "New page objects follow the same style as login.page.ts (method naming, structure)",
+        "Tests import from the project's existing fixtures.ts",
+        "Happy path covers full flow: signup -> email verification -> login with new credentials",
+        "Validation tests for signup fields (password requirements, email format, etc.)",
+        "Boundary value test for password length (7, 8, 64, 65 chars given 8-64 requirement)",
+        "Error state tests (duplicate email, invalid verification token, etc.)",
+        "All locators use semantic methods",
+        "All assertions use web-first auto-retrying methods",
+        "Tests match the file naming convention of the existing tests",
+        "A test plan is presented before writing code"
+      ]
+    }
+  ]
+}

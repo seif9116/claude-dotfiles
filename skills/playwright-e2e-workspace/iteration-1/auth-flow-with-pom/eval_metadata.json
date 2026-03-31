@@ -1,0 +1,18 @@
+{
+  "eval_id": 3,
+  "eval_name": "auth-flow-with-pom",
+  "prompt": "We already have playwright set up with POM in our project at /home/seif/test-auth-app. There's a pages/ directory with page objects and tests in tests/e2e/. I need E2E tests for the user story: 'As a user, I can sign up, verify my email, and log in.' Make sure to follow our existing patterns.",
+  "assertions": [
+    "New page objects extend the existing base.page.ts pattern",
+    "New page objects follow the same style as login.page.ts (method naming, structure)",
+    "Tests import from the project's existing fixtures.ts",
+    "Happy path covers full flow: signup -> email verification -> login with new credentials",
+    "Validation tests for signup fields (password requirements, email format, etc.)",
+    "Boundary value test for password length (7, 8, 64, 65 chars given 8-64 requirement)",
+    "Error state tests (duplicate email, invalid verification token, etc.)",
+    "All locators use semantic methods",
+    "All assertions use web-first auto-retrying methods",
+    "Tests match the file naming convention of the existing tests",
+    "A test plan is presented before writing code"
+  ]
+}

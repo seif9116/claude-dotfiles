@@ -1,0 +1,18 @@
+{
+  "eval_id": 2,
+  "eval_name": "contact-form-validation",
+  "prompt": "Write playwright tests for our contact form. The form has name, email, message fields and a submit button. After submission it shows a success toast. The project is at /home/seif/test-contact-form and already has playwright installed.",
+  "assertions": [
+    "Happy path test submits the form and verifies the success toast appears",
+    "Validation tests cover empty fields, invalid email format, and field length boundaries",
+    "At least one boundary value test (e.g., name at min/max length, message at min/max length)",
+    "Uses parameterized/data-driven tests for input variations instead of copy-pasting",
+    "All locators use semantic methods — no CSS selectors or XPath",
+    "All assertions use web-first auto-retrying methods",
+    "No hard-coded waits",
+    "Tests are independent",
+    "At least one accessibility check is included",
+    "Test names describe the user behavior being verified (not implementation details)",
+    "A test plan is presented before writing code"
+  ]
+}

@@ -9,7 +9,14 @@
       "WebFetch(domain:wiki.archlinux.org)",
       "WebFetch(domain:deepwiki.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(chmod:*)"
+      "Bash(chmod:*)",
+      "Bash(mkdir -p ~/.claude/skills/playwright-e2e/evals)",
+      "Bash(mkdir -p ~/.claude/skills/playwright-e2e-workspace/iteration-1)",
+      "Bash(for dir:*)",
+      "Bash(do)",
+      "Bash(echo \"=== $dir ===\")",
+      "Read(//home/seif/.claude/skills/playwright-e2e-workspace/iteration-1/$dir/with_skill/**)",
+      "Read(//home/seif/.claude/skills/playwright-e2e-workspace/iteration-1/$dir/without_skill/**)"
     ]
   }
 }
