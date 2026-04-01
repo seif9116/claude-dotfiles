@@ -1,3 +1,6 @@
+# Runtime data (nested .claude/ created by Claude Code)
+.claude/
+
 # Secrets
 .credentials.json
 .env
