@@ -25,9 +25,11 @@ Quran.com Ecosystem
 └── GitHub (github.com/quran)                  — 30 repos: frontend, data, fonts, mobile apps
 ```
 
-**Important:** The official Quran Foundation API requires OAuth2 authentication (Client Credentials flow for content, PKCE for user features). The legacy `api.quran.com/api/v4` still works without auth but may require auth in the future. For the hackathon, prefer the authenticated Foundation API.
+**CRITICAL: Do NOT use the legacy `api.quran.com/api/v4`.** It returns inconsistent line numbers for mushaf pages — the same endpoint returns different `line_number` values depending on caller context (curl vs browser), causing missing verses in mushaf rendering. This was confirmed through testing: 53 verses across 24 pages were missing when using the legacy API.
 
-**Demo credentials (testing only):** Client ID: `quran-demo`, Secret: `secret` — NOT for production.
+**Always use the official Foundation API:** `apis.quran.foundation/content/api/v4` with OAuth2 Client Credentials auth. This API returns consistent, correct data.
+
+**Demo credentials (testing only):** Client ID: `quran-demo`, Secret: `secret` — these may not work; request production credentials at https://api-docs.quran.foundation/request-access
 
 ## Key Concepts
 
@@ -69,17 +71,19 @@ The Quran is divided into 604 pages in the standard Madani Mushaf layout. Each p
 
 ## Content API Reference
 
-### Official (Authenticated)
+### Official (Authenticated) — USE THIS
 **Production:** `https://apis.quran.foundation/content/api/v4`
 **Prelive:** `https://apis-prelive.quran.foundation/content/api/v4`
 
 Requires OAuth2 Client Credentials flow. Headers: `x-auth-token` + `x-client-id`. Tokens expire after 1 hour.
 
-### Legacy (Unauthenticated — may require auth in future)
+The Hafiz/Tasmee project uses a server-side API route (`/api/qf-token`) to exchange client credentials for a token, which the client then uses directly with the Foundation API. See `quran-api.ts` for the `qfFetch()` wrapper.
+
+### Legacy (Unauthenticated) — DO NOT USE
 **Base URL:** `https://api.quran.com/api/v4`
 **CDN:** `https://api.qurancdn.com/api/qdc`
 
-Currently works without auth. The project uses this endpoint for simplicity.
+**WARNING:** The legacy API returns **inconsistent `line_number` values** for mushaf pages. The same endpoint returns different line numbers depending on caller context, causing missing verses in mushaf rendering (confirmed: 53 missing verses across 24 pages). Do not use for any verse/page/mushaf data. It is not documented in the official API docs at api-docs.quran.foundation.
 
 ### Demo Credentials (testing only)
 Client ID: `quran-demo` | Secret: `secret` — do NOT use in production. Get real credentials at https://api-docs.quran.foundation/request-access
@@ -424,7 +428,9 @@ Quran Foundation API → Streaks, Activity Sync
 
 ## Common Gotchas
 
-1. **QCF fonts are per-page** — You need a different font file for each of the 604 pages. Don't try to use one font for all pages.
+1. **NEVER use `api.quran.com/api/v4` for verse/page data** — This legacy API returns inconsistent `line_number` values, causing missing verses in mushaf rendering. Always use `apis.quran.foundation/content/api/v4` with OAuth2 auth. The legacy API is not even documented at api-docs.quran.foundation.
+
+2. **QCF fonts are per-page** — You need a different font file for each of the 604 pages. Don't try to use one font for all pages.
 
 2. **`code_v2` is not readable text** — It's glyph codes that only render correctly with the matching QCF font. For readable Arabic, use `text_uthmani`.
 
