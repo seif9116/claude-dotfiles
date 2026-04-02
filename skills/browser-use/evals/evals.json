@@ -1,0 +1,23 @@
+{
+  "skill_name": "browser-use",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to build a script that goes to Hacker News, grabs the top 10 posts' titles and URLs, and saves them to a JSON file. Use browser-use.",
+      "expected_output": "A working Python script using browser-use Agent with structured output (Pydantic model), proper async setup, and a custom action or file write to save results as JSON.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need to automate logging into our company portal at portal.example.com with my credentials, then navigate to the reports page and download the monthly PDF. The login has 2FA but I'll handle that manually — just get the automation set up.",
+      "expected_output": "A script using browser-use with sensitive_data for credentials, use_vision=False, headless=False for manual 2FA, browser profile reuse, and download handling.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Set up a browser-use agent that monitors a product page on Amazon every hour and alerts me on Slack if the price drops below $50. Use GPT-4o as the LLM.",
+      "expected_output": "A script using ChatOpenAI with gpt-4o, a custom tool for Slack notification, structured output for price extraction, and a scheduling loop (asyncio or cron-based).",
+      "files": []
+    }
+  ]
+}
