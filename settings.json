@@ -8,6 +8,19 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001)"
     ]
   },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/scripts/block-env-read.sh"
+          }
+        ]
+      }
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "/home/seif/.claude/scripts/statusline.sh"
@@ -56,19 +69,6 @@
       }
     }
   },
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Read|Edit|Write|Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/scripts/block-env-read.sh"
-          }
-        ]
-      }
-    ]
-  },
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
   "feedbackSurveyState": {
@@ -76,5 +76,6 @@
   },
   "pluginDirs": [
     "/home/seif/university/projects/semantic_images"
-  ]
+  ],
+  "voiceEnabled": true
 }
