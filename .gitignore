@@ -43,3 +43,6 @@ plugins/config.json
 
 # Git repos inside skills (cloned skills)
 skills/**/.git/
+
+# Skill eval workspaces (generated artifacts, not portable)
+skills/*-workspace/
